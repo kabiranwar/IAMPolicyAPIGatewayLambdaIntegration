@@ -1,0 +1,73 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:CreateRestApi",
+        "apigateway:DeleteRestApi",
+        "apigateway:GetRestApi",
+        "apigateway:UpdateRestApi",
+        "apigateway:PutRestApi",
+        "apigateway:CreateResource",
+        "apigateway:DeleteResource",
+        "apigateway:GetResources",
+        "apigateway:UpdateResource",
+        "apigateway:CreateMethod",
+        "apigateway:DeleteMethod",
+        "apigateway:GetMethod",
+        "apigateway:UpdateMethod",
+        "apigateway:PutMethod",
+        "apigateway:CreateDeployment",
+        "apigateway:GetDeployments",
+        "apigateway:DeleteDeployment",
+        "apigateway:TagResource",
+        "apigateway:CreateStage",
+        "apigateway:GetStages",
+        "apigateway:UpdateStage",
+        "apigateway:DeleteStage",
+        "apigateway:PutIntegration",
+        "apigateway:UpdateIntegration",
+        "apigateway:DeleteIntegration",
+        "apigateway:PutIntegrationResponse",
+        "apigateway:UpdateIntegrationResponse",
+        "apigateway:DeleteIntegrationResponse",
+        "apigateway:PutMethodResponse",
+        "apigateway:UpdateMethodResponse",
+        "apigateway:DeleteMethodResponse"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "lambda:CreateFunction",
+        "lambda:DeleteFunction",
+        "lambda:GetFunction",
+        "lambda:UpdateFunctionCode",
+        "lambda:UpdateFunctionConfiguration",
+        "lambda:AddPermission",
+        "lambda:RemovePermission",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "lambda:InvokeFunction",
+      "Resource": "arn:aws:lambda:*:*:function:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+
