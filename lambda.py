@@ -8,7 +8,7 @@ from botocore.exceptions import NoCredentialsError
 # Configuration
 bitbucket_repo_url = 'https://kabiranwar:Mybitbucketpwd@bitbucket.org/kabiranwar/newbitbucketproj.git'
 bitbucket_username = 'kabiranwar'
-bitbucket_app_password = 'ATBBrw4tgev9eTNbdnzkLeUQHU8QB2D18E87'
+bitbucket_app_password = 'aaaaa'
 bitbucket_repo_url = f'https://{bitbucket_username}:{bitbucket_app_password}@bitbucket.org/kabiranwar/newbitbucketproj.git'
 
 
