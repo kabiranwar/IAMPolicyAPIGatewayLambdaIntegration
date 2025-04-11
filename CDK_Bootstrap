@@ -1,0 +1,25 @@
+
+In AWS CDK (Cloud Development Kit), cdk bootstrap is a command that prepares an AWS environment (account and region) for deploying CDK applications. It sets up the necessary resources that the CDK needs to function properly.
+
+What cdk bootstrap Does:
+Creates a Staging Bucket – This S3 bucket is used to store assets (such as Lambda code, Docker images, and CloudFormation templates) before deployment.
+
+Creates an IAM Role – A CloudFormation execution role that allows AWS CDK to deploy stacks on your behalf.
+
+Creates an ECR Repository (if needed) – If your application uses Docker images, it will set up an Amazon ECR repository to store them.
+
+Stores Bootstrap Version Information – Tracks the version of the bootstrap stack to ensure compatibility with newer CDK versions.
+
+When Do You Need to Run cdk bootstrap?
+When using AWS CDK for the first time in a new AWS account or region.
+
+You van copy the bootstrap template (https://github.com/aws/aws-cdk-cli/blob/main/packages/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml) from the aws-cdk-cli GitHub repository or obtain the template with the cdk bootstrap --show-template command
+
+How to Use This with cdk bootstrap
+
+cdk bootstrap \
+  --template ./bootstrap-template.yaml \
+  --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
+  --trust 123456789012 \
+  --toolkit-stack-name CDK-Custom-Bootstrap \
+  aws://123456789012/us-east-1
